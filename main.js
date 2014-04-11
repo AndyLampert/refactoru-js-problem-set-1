@@ -7,22 +7,23 @@ $(document).on('ready', function() {
 	 */
 		var letterCapitalize = function(inputStr){
 		var words = inputStr.split(' ');
-		var wordsRemaining = words[i].substring(0);
+		// var remainLetters = inputStr.substring(1);
+		var newResult = [];
 
 		for(var i=0; i < words.length; i++) {
-			words[i] = (words[i])[0].toUpperCase();
+		// words[i] = (words[i])[0].toUpperCase();
+			newResult.push( (words[i])[0].toUpperCase() + words[i].substring(1).toLowerCase() );
+			// words[i] = (words[i])[0].toUpperCase() + words[i].substring(1).toLowerCase();
 		}
-
-		// for (var i = 0; i < wordsRemaining.length; i >= 0; i++) {
-		// 	console.log(wordsRemaining);	
-		// };
+		// console.log(words);
+		return newResult.join(' ');
 
 	};
-
 	var wordCount = function() {
 		// takes 1 string param
 		// returns number of words string contains
 	};
+
 	console.log(letterCapitalize('This is a test string'));
 });
 
