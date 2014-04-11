@@ -1,24 +1,29 @@
 $(document).on('ready', function() {
+
 	/**
 	 * [letterCapitalize description]
 	 * @param  {string} inputStr
 	 * @return {string}
 	 */
-	var letterCapitalize = function(inputStr){
+		var letterCapitalize = function(inputStr){
+		var words = inputStr.split(' ');
+		var wordsRemaining = words[i].substring(0);
 
-		var myArray = ['asdf1', 'asdf2', 'asdf3'];
-		myArray.join(' ').toString().toUpperCase();
+		for(var i=0; i < words.length; i++) {
+			words[i] = (words[i])[0].toUpperCase();
+		}
 
-		// inputStr.split(' ');
-		// return inputStr.split(' ');
+		// for (var i = 0; i < wordsRemaining.length; i >= 0; i++) {
+		// 	console.log(wordsRemaining);	
+		// };
 
 	};
+
 	var wordCount = function() {
 		// takes 1 string param
 		// returns number of words string contains
 	};
-	console.log(letterCapitalize('Here a string'));
-	console.log(letterCapitalize('Here is my string 123'));
+	console.log(letterCapitalize('This is a test string'));
 });
 
 
