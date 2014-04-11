@@ -1,30 +1,33 @@
 $(document).on('ready', function() {
 
-	/**
-	 * [letterCapitalize description]
-	 * @param  {string} inputStr
-	 * @return {string}
-	 */
-		var letterCapitalize = function(inputStr){
-		var words = inputStr.split(' ');
-		// var remainLetters = inputStr.substring(1);
-		var newResult = [];
+  /**
+   * [letterCapitalize description]
+   * @param  {string} inputStr
+   * @return {string}
+   */
+    var letterCapitalize = function(inputStr){
+    var words = inputStr.split(' ');
+    var newResult = [];
+    for(var i=0; i < words.length; i++) {
+      // words[i] = (words[i])[0].toUpperCase();
+      newResult.push( (words[i])[0].toUpperCase() + words[i].substring(1).toLowerCase() );
+      // words[i] = (words[i])[0].toUpperCase() + words[i].substring(1).toLowerCase();
+    }
 
-		for(var i=0; i < words.length; i++) {
-		// words[i] = (words[i])[0].toUpperCase();
-			newResult.push( (words[i])[0].toUpperCase() + words[i].substring(1).toLowerCase() );
-			// words[i] = (words[i])[0].toUpperCase() + words[i].substring(1).toLowerCase();
-		}
-		// console.log(words);
-		return newResult.join(' ');
+    // console.log(words);
+    return newResult.join(' ');
 
-	};
-	var wordCount = function() {
-		// takes 1 string param
-		// returns number of words string contains
-	};
+  };
 
-	console.log(letterCapitalize('This is a test string'));
+  var wordCount = function(inputStr) {
+    var words = inputStr.split(' ');
+    return words.length;    
+
+  };
+  console.log(letterCapitalize('This is a test string'));
+  console.log(wordCount('This is another test string with more words'));
+  console.log(wordCount('asdf asdf adsf This is another test string with even more words omggggg soo cool!'));
+
 });
 
 
